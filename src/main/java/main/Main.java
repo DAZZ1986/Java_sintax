@@ -185,6 +185,9 @@ public class Main {
         dog.run();     //вызов переопределенного метода из класса Dog
         dog.jump();
 */
+
+
+
 /*
         System.out.println("----------Исключения---------");
         //курс - D:\CODE\Курс\Java\[SW.BAND] [Udemy] Andrey Sumin - Java с нуля до Junior + Подготовка к собеседованию (2020)\оригинальная озвучка
@@ -217,8 +220,24 @@ public class Main {
 
         }
 */
+/*
         System.out.println("----------Коллекции---------");
 
+        double a = 12.9;
+        String aa = String.valueOf(a);
+        System.out.println(a);
+        System.out.println(aa);
+*/
+
+
+        System.out.println("----------Отличие ==  и equals()---------");
+        int a = 5;
+        int b = 5;
+        System.out.println(a == b);                     // true
+
+        String str1 = new String("Hello");
+        String str2 = new String("Hello");
+        System.out.println(str1 == str2);               // false (разные адреса в памяти)
 
 
 
@@ -226,11 +245,37 @@ public class Main {
 
 
 
-
-
-
-
-
-
+/*
+        System.out.println(isPalindrome("А в Енисее — синева.") == true);
+        System.out.println(isPalindrome("Аргентина манит негра.") == true);
+        System.out.println(isPalindrome("Не палиндром") == false);
+ */
     }
+    /*
+        public static boolean isPalindrome(String word) {
+            String wordClear = word.replaceAll("[^\\p{L}_0-9]", "");
+            wordClear = wordClear.toLowerCase();
+            String[] splitArr = wordClear.split("");
+
+            for (String item : splitArr) {
+                System.out.println(item);
+            }
+            System.out.println(isPalindrome("А в Енисее — синева.") == true);
+
+            int lenght = splitArr.length;
+
+            for (int i = 0; i < lenght / 2; i++) {
+                String f = splitArr[i];
+                String l = splitArr[lenght-1-i];
+
+                if(wordClear.charAt(i) != wordClear.charAt(lenght - 1 - i)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    */
+
 }
+
+

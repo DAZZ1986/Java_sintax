@@ -1,9 +1,6 @@
 package main.Collections;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 public class Collections {
 
@@ -130,19 +127,67 @@ public class Collections {
 
 
         System.out.println("--------------HashSet---------------");
+        Set<String> hashSet = new HashSet<>();
+        hashSet.add("Banana");
+        hashSet.add("Apple");
+        hashSet.add("Cherry");
+        hashSet.add("Apple");           // не может иметь повтор€ющиес€ значени€
+
+        System.out.println(hashSet); // [Apple, Cherry, Banana]  -  пор€док не гарантирован !!!
 
 
         System.out.println("--------------LinkedHashSet---------------");
+        Set<String> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.add("Banana");
+        linkedHashSet.add("Apple");
+        linkedHashSet.add("Cherry");
+        linkedHashSet.add("Apple");     // не может иметь повтор€ющиес€ значени€
+
+        System.out.println(linkedHashSet); // [Banana, Apple, Cherry]  -  пор€док добавлени€ сохранен !!!
+
+        //System.out.println("--------------TreeSet---------------");
+        //System.out.println("--------------CopyOnWriteArraySet---------------");
 
 
-        System.out.println("--------------TreeSet---------------");
 
 
-        System.out.println("--------------CopyOnWriteArraySet---------------");
+        System.out.println("-------//////////-------Queue/Deque--------//////////-------");
+
+        System.out.println("--------------Queue/LinkedList ---------------");
+        Queue<String> queue = new LinkedList<>();
+        queue.add("A"); // или offer()
+        queue.add("B");
+        queue.add("C");
+
+        System.out.println(queue.poll()); // "A" (удал€ет)
+        System.out.println(queue.peek()); // "B" (не удал€ет)
+        System.out.println(queue); // [B, C]
+
+        System.out.println("--------------FIFO (First-In-First-Out) Ч элементы обрабатываютс€ в пор€дке добавлени€.---------------");
+        //ќсновные реализации:
+        //- ArrayDeque Ч более производительна€ альтернатива LinkedList.
+        //- PriorityQueue Ч очередь с приоритетом.
+        //- LinkedList Ч базова€ очередь.
+        Deque<String> deque = new ArrayDeque<>();
+        deque.addLast("A"); // или offerLast()
+        deque.addLast("B");
+        deque.addLast("C");
+
+        System.out.println(deque.removeFirst()); // "A" (pollFirst())
+        System.out.println(deque); // [B, C]
 
 
+        System.out.println("--------------ћожет работать как стек (LIFO) или очередь (FIFO).---------------");
+        //ќсновные реализации:
+        //- ArrayDeque Ч быстра€ реализаци€ на массиве.
+        //- LinkedList Ч менее производительна€, но гибка€.
+        Deque<String> stack = new ArrayDeque<>();
+        stack.push("A"); // addFirst()
+        stack.push("B");
+        stack.push("C");
 
-
+        System.out.println(stack.pop()); // "C" (removeFirst())
+        System.out.println(stack); // [B, A]
     }
 
 

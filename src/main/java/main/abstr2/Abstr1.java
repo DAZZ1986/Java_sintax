@@ -14,4 +14,7 @@ public abstract class Abstr1 {
 
     abstract void run();
     abstract void jump();
+    public void draw() {    //реализация по умолчанию
+        System.out.println("Animal is drawing!");
+    }
 }
