@@ -7,6 +7,23 @@ public class Collections {
 
     public static void main(String[] args) {
 
+        System.out.println("-------//////////-------¬арианты перебора коллекций--------//////////-------");
+        System.out.println("1) sout:");
+        List list00 = new ArrayList();
+        list00.add(3);
+        list00.add("654");
+        System.out.println(list00);
+
+        System.out.println("2) foreach:");
+        for (Object item: list00) {
+            System.out.println(item);
+        }
+        System.out.println("3) iterator:");
+        Iterator<Object> iterator = list00.iterator();
+        while(iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
         System.out.println("-------//////////-------List--------//////////-------");
         //Х	допускаютс€ повтор€ющиес€ элементы - ок
         //Х	элементы в списке хран€тс€ в том пор€дке, в котором они туда помещались - ок
