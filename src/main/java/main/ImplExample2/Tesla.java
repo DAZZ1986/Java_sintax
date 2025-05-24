@@ -4,11 +4,12 @@ public class Tesla extends Car implements Electro {
 
     int battelyLvl;
 
+
+
     public Tesla(String model, int battelyLvl) {
         super(model);
         this.battelyLvl = battelyLvl;
     }
-
 
 
 

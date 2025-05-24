@@ -7,7 +7,7 @@ public class Collections {
 
     public static void main(String[] args) {
 
-        System.out.println("-------//////////-------Варианты перебора коллекций--------//////////-------");
+        System.out.println("-------//////////-------Варианты перебора коллекций --------//////////-------");
         System.out.println("1) sout:");
         List list00 = new ArrayList();
         list00.add(3);
@@ -18,7 +18,8 @@ public class Collections {
         for (Object item: list00) {
             System.out.println(item);
         }
-        System.out.println("3) iterator:");
+
+        System.out.println("3) iterator:"); //https://vkvideo.ru/video-230191111_456242830
         Iterator<Object> iterator = list00.iterator();
         while(iterator.hasNext()) {
             System.out.println(iterator.next());

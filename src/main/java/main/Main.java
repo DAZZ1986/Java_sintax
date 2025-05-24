@@ -4,6 +4,9 @@ import main.Exeptions.ExceptionExample;
 import main.ImplExample.Door;
 import main.ImplExample.IronDoor;
 import main.ImplExample.WoodDoor;
+import main.ImplExample2.Bmw;
+import main.ImplExample2.Car;
+import main.ImplExample2.Tesla;
 import main.abstr.Cat;
 import main.abstr.Dog;
 import main.oop.Test;
@@ -159,7 +162,7 @@ public class Main {
         SmallIronDoor smallIronDoor = new SmallIronDoor();  //
         smallIronDoor.accessProtectedMethod();  // Вызов метода, который обращается к protected методу и доступ возможен только через класс/объект наследника или в одном пакете.
 */
-/*
+
         System.out.println("----------Наследование и интерфейсы (Car)---------");
 
         Car car1 = new Car("Base");
@@ -172,7 +175,6 @@ public class Main {
         Tesla tesla1 = new Tesla("Ineos", 25);
         System.out.println("Car model - " + tesla1.getCarModel());        //вызов метода из класса родителя
         System.out.println("Refill energy - " + tesla1.chargeByEnergy()); //вызов метода из интерфейса
-*/
 /*
         System.out.println("----------Абстрактные классы---------");
         Cat cat = new Cat();
